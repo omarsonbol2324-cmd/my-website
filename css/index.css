@@ -1,0 +1,216 @@
+:root {
+    --primary: #1e3a8a; /* ������ ������ */
+    --accent: #fbbf24; /* ������ */
+    --white: #ffffff;
+    --bg: #f3f4f6;
+}
+
+body {
+    font-family: 'Tajawal', sans-serif;
+    background: var(--bg);
+    margin: 0;
+    direction: rtl;
+}
+
+nav {
+    background: var(--primary);
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+    nav .logo {
+        color: var(--accent);
+        font-weight: bold;
+        font-size: 1.5rem;
+    }
+
+    nav ul {
+        display: flex;
+        list-style: none;
+        gap: 20px;
+    }
+
+        nav ul li a {
+            color: var(--white);
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+            nav ul li a:hover {
+                color: var(--accent);
+            }
+
+.hero {
+    background: linear-gradient(rgba(30,58,138,0.8), rgba(30,58,138,0.8)), url('../img/hero.jpg');
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.section-title {
+    text-align: center;
+    margin: 40px 0;
+    color: var(--primary);
+}
+
+.events-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 0 5%;
+}
+
+.card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+    .card:hover {
+        transform: translateY(-10px);
+    }
+
+    .card img {
+        width: 100%;
+        height: 160px;
+        object-fit: cover;
+    }
+
+.card-body {
+    padding: 15px;
+    text-align: center;
+}
+
+.btn-card {
+    display: inline-block;
+    background: var(--primary);
+    color: white;
+    padding: 8px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+    .btn-card:hover {
+        background: var(--accent);
+        color: var(--primary);
+    }
+
+footer {
+    background: var(--primary);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}
+/* ������� �� ����� ������ */
+body.dark-mode {
+    --bg: #121212;
+    --white: #1e1e1e;
+    --text: #e0e0e0;
+    --primary: #0f172a; /* ���� ���� */
+}
+
+/* ����� ����� ������ */
+.nav-controls {
+    display: flex;
+    gap: 10px;
+}
+
+.control-btn {
+    background: var(--accent);
+    border: none;
+    padding: 5px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: 'Tajawal';
+    transition: 0.3s;
+}
+
+    .control-btn:hover {
+        transform: scale(1.1);
+    }
+
+/* ����� ���� ��� ������ �� ������ ��� */
+body.dark-mode p, body.dark-mode h2, body.dark-mode h3 {
+    color: var(--text);
+}
+
+
+/* تنسيقات قسم فريق العمل */
+.team-section {
+    padding: 60px 5%;
+}
+
+.team-grid {
+    display: grid;
+    /* توزيع مرن: سطر واحد على الشاشات الكبيرة، وتلقائي على الصغيرة */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    gap: 25px;
+    justify-content: center;
+}
+
+.team-card {
+    background: var(--white);
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: 0.3s ease;
+    border-bottom: 4px solid var(--primary);
+}
+
+.team-card:hover {
+    transform: translateY(-5px);
+    border-bottom-color: rgba(2, 24, 86, 0.8);
+}
+
+.team-img-container {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 15px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid var(--bg);
+}
+
+.team-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.team-info h3 {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    color: var(--primary);
+}
+
+.team-info .role {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 0;
+}
+
+body.dark-mode .team-card {
+    background: #1e1e1e;
+    border-bottom-color: rgba(30,58,138,0.8);
+}
+
+body.dark-mode .team-info h3 {
+    color: rgba(39, 85, 214, 0.8);
+}
+
+body.dark-mode .team-info .role {
+    color: #bbb;
+}

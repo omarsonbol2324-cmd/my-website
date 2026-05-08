@@ -1,0 +1,178 @@
+:root {
+    --primary: #1e3a8a;
+    --accent: #fbbf24;
+    --white: #ffffff;
+    --bg: #f8fafc;
+    --text: #1e293b;
+}
+
+body {
+    font-family: 'Tajawal', sans-serif;
+    background: var(--bg);
+    margin: 0;
+    direction: rtl;
+    color: var(--text);
+}
+
+/* ‘—Ìÿ «· ‰ﬁ· Ê ‰”Ìﬁ «·√“—«— (‰›” «·ÂÊÌ… «·„ÊÕœ…) */
+nav {
+    background: var(--primary);
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+    nav ul {
+        display: flex;
+        list-style: none;
+        gap: 20px;
+    }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+.nav-controls {
+    display: flex;
+    gap: 10px;
+}
+
+.control-btn {
+    background: var(--accent);
+    border: none;
+    padding: 5px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/*  ‰”Ìﬁ ’‰«œÌﬁ «·„⁄·Ê„«  («·—ƒÌ…° «·—”«·…° «·Âœ›) */
+.info-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 40px 5%;
+}
+
+.info-box {
+    background: var(--white);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    border-bottom: 4px solid var(--primary);
+}
+
+    .info-box h3 {
+        color: var(--primary);
+        margin-bottom: 15px;
+    }
+
+/* ”Ì«”… «· ﬁœÌ„ */
+.policy-section {
+    margin: 20px 5%;
+    padding: 30px;
+    background: #eff6ff;
+    border-radius: 15px;
+    border-right: 6px solid var(--accent);
+}
+
+    .policy-section h2 {
+        color: var(--primary);
+        margin-bottom: 15px;
+    }
+
+    .policy-section ul {
+        padding-right: 20px;
+    }
+
+    .policy-section li {
+        margin-bottom: 10px;
+        font-weight: bold;
+    }
+
+/* ›—Ìﬁ «·⁄„· (»‘ﬂ· ﬂ—Ê  ”·«”…) */
+.team-section {
+    text-align: center;
+    padding: 40px 5%;
+}
+
+    .team-section h2 {
+        margin-bottom: 30px;
+        color: var(--primary);
+    }
+
+.team-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.member-card {
+    background: var(--primary);
+    color: white;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: 0.3s;
+    box-shadow: 0 4px 15px rgba(30, 58, 138, 0.2);
+}
+
+    .member-card:hover {
+        background: var(--accent);
+        color: var(--primary);
+        transform: translateY(-5px);
+    }
+
+footer {
+    background: var(--primary);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+/* œ⁄„ «·œ«—ﬂ „Êœ ··√”„«¡ */
+body.dark-mode .info-box, body.dark-mode .policy-section {
+    background: #1e1e1e;
+    color: white;
+}
+
+body.dark-mode .member-card {
+    background: var(--accent);
+    color: var(--primary);
+}
+/* «·√·Ê«‰ ›Ì «·Ê÷⁄ «··Ì·Ì */
+body.dark-mode {
+    --bg: #121212;
+    --white: #1e1e1e;
+    --text: #e0e0e0;
+    --primary: #0f172a; /* √“—ﬁ √€„ﬁ */
+}
+
+/*  ‰”Ìﬁ √“—«— «· Õﬂ„ */
+.nav-controls {
+    display: flex;
+    gap: 10px;
+}
+
+.control-btn {
+    background: var(--accent);
+    border: none;
+    padding: 5px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: 'Tajawal';
+    transition: 0.3s;
+}
+
+    .control-btn:hover {
+        transform: scale(1.1);
+    }
+
+/* ·÷„«‰  €Ì— ·Ê‰ «·‰’Ê’ ›Ì «·œ«—ﬂ „Êœ */
+body.dark-mode p, body.dark-mode h2, body.dark-mode h3 {
+    color: var(--text);
+}
